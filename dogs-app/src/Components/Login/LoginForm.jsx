@@ -4,9 +4,6 @@ import Input from '../Form/Input';
 import Button from '../Form/Button';
 
 const LoginForm = () => {
-	const [username, setUsername] = useState(''),
-		[password, setPassword] = useState('');
-
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		fetch('https://dogsapi.origamid.dev/json/jwt-auth/v1/token', {
@@ -14,7 +11,7 @@ const LoginForm = () => {
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify({ username, password }),
+			body: JSON.stringify(),
 		}).then((response) => {
 			console.log(response);
 			return response.json();
