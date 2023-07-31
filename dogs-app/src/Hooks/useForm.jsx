@@ -1,9 +1,17 @@
-import React from 'react'
+import React from 'react';
 
 const useForm = () => {
-  return (
-    <div>useForm</div>
-  )
-}
+    const [value, setValue] = useState('');
 
-export default useForm
+    function onChange({ target }) {
+        setValue(value);
+    }
+
+    return (
+        value,
+        setValue,
+        onChange
+    );
+};
+
+export default useForm;
