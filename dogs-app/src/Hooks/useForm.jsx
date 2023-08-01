@@ -4,14 +4,14 @@ const useForm = () => {
     const [value, setValue] = useState('');
 
     function onChange({ target }) {
-        setValue(value);
+        setValue(target.value);
     }
 
-    return (
+    return {
         value,
         setValue,
         onChange
-    );
+    };
 };
 
 export default useForm;
