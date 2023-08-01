@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Input from '../Form/Input';
 import Button from '../Form/Button';
+import useForm from '../../Hooks/useForm';
 
 const LoginForm = () => {
+	const username = useForm();	
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		fetch('https://dogsapi.origamid.dev/json/jwt-auth/v1/token', {
