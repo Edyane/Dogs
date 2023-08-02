@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Form, Link } from 'react-router-dom';
 import Input from '../Form/Input';
 import Button from '../Form/Button';
 import useForm from '../../Hooks/useForm';
 
 const LoginForm = () => {
-	const username = useForm();	
+	const username = useForm('email');	
+	const password = useForm();
+	console.log(password.value);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -29,10 +31,12 @@ const LoginForm = () => {
 			{/* onSubmit = ao enviar eu quero que ocorra uma ação */}
 			
 			<form action="" onSubmit={handleSubmit}>
-				<Input label="Usuário" type="text" name={username} />
-				<Input label="Senha" type="password" name={password} />
+				<Input label="Usuário" type="text" name={...username} />
+				<Input label="Senha" type="password" name={...password} />
 				<Button>Entrar</Button>
 			</form>
+
+			<Form />
 
 			<Link to="/login/criar">Cadastro</Link>
 		</section>
