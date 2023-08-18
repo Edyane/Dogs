@@ -17,21 +17,21 @@ const LoginForm = () => {
 	}
 
 	return (
-		<section>
-			<h1>Login</h1>
-			<form onSubmit={handleSubmit}>
-				<Input label="Usuário" type="text" name="username" {...username} />
-				<Input label="Senha" type="password" name="password" {...password} />
-			</form>
-			<Link to="/login/perdeu">
-				Perdeu a Senha?
-			</Link>
-			<div>
-				<Link to="/login/criar">
-					Cadastro
-				</Link>
-			</div>
-		</section>
+		// <section>
+		// 	<h1>Login</h1>
+		// 	<form onSubmit={handleSubmit}>
+		// 		<Input label="Usuário" type="text" name="username" {...username} />
+		// 		<Input label="Senha" type="password" name="password" {...password} />
+		// 	</form>
+		// 	<Link to="/login/perdeu">
+		// 		Perdeu a Senha?
+		// 	</Link>
+		// 	<div>
+		// 		<Link to="/login/criar">
+		// 			Cadastro
+		// 		</Link>
+		// 	</div>
+		// </section>
 	);
 };
 
