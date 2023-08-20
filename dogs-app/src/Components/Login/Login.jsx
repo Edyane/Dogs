@@ -7,12 +7,14 @@ import LoginPasswordReset from './LoginPasswordReset';
 
 const Login = () => {
 	return (
-		<Routes>
-			<Route path="/" element={<LoginForm />} />
-			<Route path="criar" element={<LoginCreate />} />
-			<Route path="perdeu" element={<LoginPasswordLost />} />
-			<Route path="resetar" element={<LoginPasswordReset />} />
-		</Routes>
+		<div>
+			<Routes>
+				<Route path="/" element={<LoginForm />} />
+				<Route path="criar" element={<LoginCreate />} />
+				<Route path="perdeu" element={<LoginPasswordLost />} />
+				<Route path="resetar" element={<LoginPasswordReset />} />
+			</Routes>
+		</div>
 	)
 }
 
