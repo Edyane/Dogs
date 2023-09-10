@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext }from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import LoginForm from './LoginForm';
 import LoginCreate from './LoginCreate';
@@ -11,7 +11,6 @@ const Login = () => {
 	const { login } = useContext(UserContext);
 
 	if (login === true) return <Navigate to="/conta" />;
-
 	return (
 		<section className={styles.login}>
 			<div className={styles.forms}>
@@ -23,7 +22,7 @@ const Login = () => {
 				</Routes>
 			</div>
 		</section>
-	)
-}
+	);
+};
 
 export default Login;
