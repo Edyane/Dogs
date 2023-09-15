@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import UserHeaderNav from './UserHeaderNav';
 import styles from './UserHeader.module.css';
 import { useLocation } from 'react-router-dom';
 
 const UserHeader = () => {
-    const [title, setTitle] = React.useState('');
+    const [title, setTitle] = useState('');
     const location = useLocation();
 
     React.useEffect(() => {
