@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { UserContext } from '../../UserContext';
 import { ReactComponent as MinhasFotos } from '../../Assets/feed.svg';
 import { ReactComponent as Estatisticas } from '../../Assets/estatisticas.svg';
