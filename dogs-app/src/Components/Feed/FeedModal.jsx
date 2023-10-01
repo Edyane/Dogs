@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './FeedModal.module.css';
 import useFetch from '../../Hooks/useFetch';
 import Error from '../Helper/Error';
@@ -28,3 +28,4 @@ const FeedModal = ({ photo, setModalPhoto }) => {
 };
 
 export default FeedModal;
+
