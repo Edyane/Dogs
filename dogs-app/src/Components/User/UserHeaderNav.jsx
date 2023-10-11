@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { UserContext } from '../../UserContext';
 import { ReactComponent as MinhasFotos } from '../../Assets/feed.svg';
@@ -20,7 +20,7 @@ const UserHeaderNav = () => {
     const [mobileMenu, setMobileMenu] = useState(false);
 
     const { pathname } = useLocation();
-    React.useEffect(() => {
+    useEffect(() => {
         setMobileMenu(false);
     }, [pathname]);
 
