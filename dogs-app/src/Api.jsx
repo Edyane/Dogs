@@ -11,7 +11,7 @@ export function TOKEN_POST(body) {
             body: JSON.stringify(body),
         },
     };
-}
+};
 
 export function TOKEN_VALIDATE_POST(token) {
     return {
@@ -23,7 +23,7 @@ export function TOKEN_VALIDATE_POST(token) {
             },
         },
     };
-}
+};
 
 export function USER_GET(token) {
     return {
@@ -35,7 +35,7 @@ export function USER_GET(token) {
             },
         },
     };
-}
+};
 
 export function USER_POST(body) {
     return {
@@ -48,7 +48,7 @@ export function USER_POST(body) {
             body: JSON.stringify(body),
         },
     };
-}
+};
 
 export function PHOTO_POST(formData, token) {
     return {
@@ -61,7 +61,7 @@ export function PHOTO_POST(formData, token) {
             body: formData,
         },
     };
-}
+};
 
 export function PHOTOS_GET({ page, total, user }) {
     return {
@@ -71,7 +71,7 @@ export function PHOTOS_GET({ page, total, user }) {
             cache: 'no-store',
         },
     };
-}
+};
 
 export function PHOTO_GET(id) {
     return {
@@ -81,4 +81,18 @@ export function PHOTO_GET(id) {
             cache: 'no-store',
         },
     };
-}
+};
+
+export function COMMENT_POST(id, body) {
+    return {
+        url: `${API_URL}/api/comment/${id}`,
+        options: {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + window.localStorage.getItem('token'),
+            },
+            body: JSON.stringify(body),
+        },
+    };
+};
