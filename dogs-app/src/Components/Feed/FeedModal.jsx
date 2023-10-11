@@ -4,7 +4,7 @@ import useFetch from '../../Hooks/useFetch';
 import Error from '../Helper/Error';
 import Loading from '../Helper/Loading';
 import { PHOTO_GET } from '../../Api';
-// import PhotoContent from '../Photo/PhotoContent';
+import PhotoContent from '../Photo/PhotoContent';
 
 const FeedModal = ({ photo, setModalPhoto }) => {
 	const { data, error, loading, request } = useFetch();
@@ -14,8 +14,8 @@ const FeedModal = ({ photo, setModalPhoto }) => {
 		request(url, options);
 	}, [photo, request]);
 
-	function handleOutsideClick(event) {
-		if (event.target === event.currentTarget) setModalPhoto(null);
+	const handleOutsideClick = (e) => {
+		if (e.target === e.currentTarget) setModalPhoto(null);
 	}
 
 	return (
@@ -28,4 +28,3 @@ const FeedModal = ({ photo, setModalPhoto }) => {
 };
 
 export default FeedModal;
-
