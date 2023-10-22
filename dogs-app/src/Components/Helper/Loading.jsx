@@ -1,6 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Loading = () => {
+	const [step, setStep] = useState(0);
+
+	useEffect(() => {
+		const updateStep = () => {
+			setStep((step) => {
+				if (step < 3) return step + 1;
+				else return 0;
+			});
+		}
+		const interval = setInterval(updateStep, 300);
+		return () => {
+			clearInterval(interval);
+		};
+	}, []);
+
+	const displayStep = (i) => {
+		return {
+			display: step === i ? 'block' : 'none',
+		};
+	}
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.loading}>
