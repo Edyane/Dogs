@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import styles from './Loading.module.css';
 
 const Loading = () => {
 	const [step, setStep] = useState(0);
 
 	useEffect(() => {
-		const updateStep = () => {
+		function updateStep() {
 			setStep((step) => {
 				if (step < 3) return step + 1;
 				else return 0;
@@ -16,11 +17,12 @@ const Loading = () => {
 		};
 	}, []);
 
-	const displayStep = (i) => {
+	function displayStep(i) {
 		return {
 			display: step === i ? 'block' : 'none',
 		};
 	}
+
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.loading}>
