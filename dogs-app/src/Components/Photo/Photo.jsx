@@ -5,7 +5,6 @@ import { PHOTO_GET } from '../../Api';
 import Error from '../Helper/Error';
 import Loading from '../Helper/Loading';
 import PhotoContent from './PhotoContent';
-import { useEffect } from 'react';
 
 const Photo = () => {
 	const { id } = useParams();
