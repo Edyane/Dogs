@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import UserHeader from './UserHeader';
 import { Routes, Route } from 'react-router-dom';
 import Feed from '../Feed/Feed';
@@ -8,7 +8,7 @@ import { UserContext } from '../../UserContext';
 import NotFound from '../../Components/NotFound';
 
 const User = () => {
-	const { data } = React.useContext(UserContext);
+	const { data } = useContext(UserContext);
 
 	return (
 		<section className="container">
