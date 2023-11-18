@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import FeedModal from './FeedModal';
 import FeedPhotos from './FeedPhotos';
+import PropTypes from 'prop-types';
 
 const Feed = ({ user }) => {
-	const [modalPhoto, setModalPhoto] = useState(null);
-	const [pages, setPages] = useState([1]);
-	const [infinite, setInfinite] = useState(true);
+	const [modalPhoto, setModalPhoto] = React.useState(null);
+	const [pages, setPages] = React.useState([1]);
+	const [infinite, setInfinite] = React.useState(true);
 
-	useEffect(() => {
+	React.useEffect(() => {
 		let wait = false;
 		function infiniteScroll() {
 			if (infinite) {
@@ -70,6 +71,5 @@ Feed.propTypes = {
 		PropTypes.number.isRequired,
 	]),
 };
-
 
 export default Feed;
